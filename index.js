@@ -5,6 +5,7 @@
 'use strict'
 
 const stream = require('streamroller');
+const type = require('sugar-type');
 const moment = require('moment');
 const util = require('util');
 const os = require('os');
@@ -12,7 +13,7 @@ const os = require('os');
 // 日志级别类
 const Level = require('./libs/Level');
 
-const type = require('./libs/type');
+
 const defaultLevels = require('./libs/levels');
 
 // 换行符
