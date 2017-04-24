@@ -1,13 +1,21 @@
 {
   "name": "sugar-log",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "sugar2.0框架日志组件",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fengshangshi/sugar-type.git"
+  },
   "author": "ss.feng",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fengshangshi/sugar-type/issues"
+  },
+  "homepage": "https://github.com/fengshangshi/sugar-type#readme",
   "dependencies": {
     "moment": "^2.18.1",
     "streamroller": "^0.4.0",
