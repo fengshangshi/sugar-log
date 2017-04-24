@@ -1,0 +1,15 @@
+{
+    "name": "sugar-log",
+    "version": "0.0.6",
+    "description": "sugar2.0框架日志组件",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "ss.feng",
+    "license": "ISC",
+    "dependencies": {
+        "moment": "^2.18.1",
+        "streamroller": "^0.4.0"
+    }
+}
