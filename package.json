@@ -1,24 +1,24 @@
 {
-  "name": "sugar-log",
-  "version": "0.0.10",
-  "description": "sugar2.0框架日志组件",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/fengshangshi/sugar-log.git"
-  },
-  "author": "ss.feng",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/fengshangshi/sugar-log/issues"
-  },
-  "homepage": "https://github.com/fengshangshi/sugar-log#readme",
-  "dependencies": {
-    "moment": "^2.18.1",
-    "streamroller": "^0.4.0",
-    "sugar-type": "0.0.1"
-  }
+    "name": "sugar-log",
+    "version": "0.0.11",
+    "description": "sugar2.0框架日志组件",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/fengshangshi/sugar-log.git"
+    },
+    "author": "ss.feng",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/fengshangshi/sugar-log/issues"
+    },
+    "homepage": "https://github.com/fengshangshi/sugar-log#readme",
+    "dependencies": {
+        "moment": "^2.18.1",
+        "streamroller": "^0.4.0",
+        "sugar-type": "0.0.1"
+    }
 }
