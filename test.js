@@ -36,6 +36,7 @@ log1.fatal('fatal');
 // 下面是具有实际参数的例子，最终的日志保存:/path/to/logs/app_2017-04-21.log中
 // 内部日志级别的code映射关系：TRACE: 1000 DEBUG: 2000 INFO: 3000 WARN: 4000 ERROR: 5000 FATAL: 6000
 var log2 = new Logger({
+    category: 'file',
     filename: 'logs/app/app',
     pattern: '_yyyy-MM-dd.log',
     customLevels: {
@@ -52,9 +53,20 @@ log2.shangshi('我是尚实， 我是自定义日志级别，你可以知道我�
 log2.feng('我姓冯，我是自定义日志级别');
 log2.error('[++%s++]', '我最终会被放在error方法的第一个参数里', '我会跟随在后面，但是我没有中括号和加号包裹');
 log2.log('abc', '我就任性，我就写abc类型的log');
-log2.info('[%s --> %s], [%s, %s]', new Date(), '我是好样的字符串', '我真的不知道要怎么弄这个格式化才好看', '算了，不弄了，让开发者自己弄吧');
+log2.warn('[%s --> %s], [%s, %s]', new Date(), '我是好样的字符串', '我真的不知道要怎么弄这个格式化才好看', '算了，不弄了，让开发者自己弄吧');
 log2.info('%j', {
     a: 1,
     b: 2
 });
 log2.info('%d + %d%%', 2.22, 2.3);
+
+
+
+var log3 = new Logger();
+log3.category = 'terminal';
+log3.trace("看看我在终端展示的颜色表现吧，我是gray");
+log3.debug("看看我在终端展示的颜色表现吧，我是blue");
+log3.info("看看我在终端展示的颜色表现吧，我是white");
+log3.warn("看看我在终端展示的颜色表现吧，我是yellow");
+log3.error("看看我在终端展示的颜色表现吧，我是red");
+log3.fatal("看看我在终端展示的颜色表现吧，我是magenta");

@@ -7,14 +7,21 @@
 const stream = require('streamroller');
 const type = require('sugar-type');
 const moment = require('moment');
+const chalk = require('chalk');
 const util = require('util');
 const os = require('os');
 
 // 日志级别类
 const Level = require('./libs/Level');
 
-
+// 初始化的日志级别
 const defaultLevels = require('./libs/levels');
+
+// 初始化的日志终端色彩
+const level2color = require('./libs/colors');
+
+// 日志类别
+const categories = require('./libs/categories');
 
 // 换行符
 const EOL = os.EOL || '\n';
@@ -52,6 +59,10 @@ class Logger {
         this.levels.forEach(this.__addLevelMethods);
 
         this.level = options.level || 'TRACE';
+
+        // 日志输出类型
+        let category = options.category || 'file';
+        this.category = categories[category] || categories['file'];
     }
 
     // 添加实例方法
@@ -65,7 +76,17 @@ class Logger {
     // 日志写入，Logger类的核心
     __log(level, data) {
         if (this.__isLevelEnabled(level)) {
-            this.roller.write(this.__formatLogData(level, data) + EOL, 'utf8');
+            let logData = this.__formatLogData(level, data);
+
+            switch (this.category) {
+                // 日志记录类型是终端
+                case 'terminal':
+                    this.__terminal(logData, level);
+                    break;
+
+                default:
+                    this.__file(logData);
+            }
         }
     }
 
@@ -96,6 +117,18 @@ class Logger {
             return item;
         });
     }
+
+    // 日志输出到文件
+    __file(data) {
+        this.roller.write(data + EOL, 'utf8');
+    }
+
+    // 日志输出到终端
+    __terminal(data, level) {
+        let color = level2color[level] || 'white';
+        console.log(chalk[color](data));
+    }
+
 
     log() {
         let args = Array.from(arguments);
@@ -141,6 +174,19 @@ class Logger {
 
     get levels() {
         return this._levels;
+    }
+
+    set category(newValue) {
+        if (categories[newValue]) {
+            return this._category = categories[newValue];
+        }
+
+        // 异常设置提醒
+        throw new Error('Log category ' + newValue.toString() + ' is illegal');
+    }
+
+    get category() {
+        return this._category;
     }
 
 }

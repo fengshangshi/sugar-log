@@ -35,9 +35,10 @@ logger.sugar('我是另外的一条日志记录，我也是通过sugar方法打�
 ## 进阶
 ### Logger实例化参数说明
 * level - 默认：TRACE，最低日志级别，低于该级别的日志不会被记录
-* filename - 默认：/path/to/log 设置日志文件，包含路径
-* pattern - 默认: .yyyy-MM-dd，模式设置，和filename配合生成完整文件路径
 * customLevels - 自定义的日志级别对象，和默认日志级别会最终merge
+* category - 默认：file 日志输出类别，file-输出到文件 terminal-输出到终端，设定为terminal，会忽略：filename、pattern等设置
+* filename - 默认：/path/to/log 设置日志文件，包含路径，category为file时生效
+* pattern - 默认: .yyyy-MM-dd，模式设置，和filename配合生成完整文件路径，category为file时生效
 
 ### logger可以用来记录日志的方法
 推荐大家使用6个默认的日志记录方法：
