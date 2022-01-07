@@ -1,6 +1,6 @@
 {
   "name": "sugar-log",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "sugar2.0框架日志组件",
   "main": "index.js",
   "scripts": {
