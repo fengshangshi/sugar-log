@@ -5,10 +5,10 @@
 'use strict'
 
 module.exports = {
-    TRACE: 'gray',
-    DEBUG: 'blue',
-    INFO: 'white',
-    WARN: 'yellow',
-    ERROR: 'red',
-    FATAL: 'magenta',
+	TRACE: 'gray',
+	DEBUG: 'blue',
+	INFO: 'white',
+	WARN: 'yellow',
+	ERROR: 'red',
+	FATAL: 'magenta',
 };

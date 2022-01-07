@@ -70,3 +70,9 @@ log3.info("看看我在终端展示的颜色表现吧，我是white");
 log3.warn("看看我在终端展示的颜色表现吧，我是yellow");
 log3.error("看看我在终端展示的颜色表现吧，我是red");
 log3.fatal("看看我在终端展示的颜色表现吧，我是magenta");
+
+// 打印日志ID
+log3.info(log3.logId);
+
+// 打印错误对象
+log3.info(new Error('throw error'));

@@ -19,6 +19,7 @@
   "dependencies": {
     "chalk": "^1.1.3",
     "moment": "^2.18.1",
+    "sha1": "^1.1.1",
     "streamroller": "^0.4.0",
     "sugar-type": "0.0.3"
   }

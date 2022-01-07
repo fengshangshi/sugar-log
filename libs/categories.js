@@ -5,6 +5,6 @@
 'use strict'
 
 module.exports = {
-    terminal: 'terminal',
-    file: 'file',
+	terminal: 'terminal',
+	file: 'file',
 };
